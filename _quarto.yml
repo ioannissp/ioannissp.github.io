@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Ioannis Spanos"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - projects.qmd
+    right: 
+      - icon: github
+        href: https://github.com/ioannissp?ocid=AIDcmm153qff2f_SEM__k_EAIaIQobChMIl5uKosWAhgMV5o9QBh1vOgceEAAYASAAEgKsp_D_BwE_k_
+        aria-label: GitHub
+    title: "Ioannis Spanos"
+  sidebar: 
+    search: True
+    
+    tools: 
+      - icon: github
+        href: https://github.com/ioannissp?ocid=AIDcmm153qff2f_SEM__k_EAIaIQobChMIl5uKosWAhgMV5o9QBh1vOgceEAAYASAAEgKsp_D_BwE_k_
+      - icon: linkedin
+        href: https://www.linkedin.com/in/ioannis-spanos-ab4178238
+      - icon: envelope
+        href: mailto:is323@ic.ac.uk
+  search: 
+    location: navbar
+    type: overlay
+    algolia: 
+      index-name: data_science_cw2
+      application-id: GLBMTKU046
+      search-only-api-key: 7dbab228f3e9050a0b5184f8c62c61bd
+        
+    
+
+format:
+  html:
+    theme: sandstone
+    mainfont: arial
+    fontsize: 1.5rem
+    fontcolor: "#21332B" 
+    #backgroundcolor: "#21C47B"
+    css: styles.css
+    toc: true
+
+editor: visual
+
+
+
+

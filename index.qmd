@@ -1,0 +1,26 @@
+---
+title: "Ioannis Spanos"
+image: headshotopt.jpg
+about:
+  template: trestles
+  image-shape: round
+  image-width: 10em
+  links: 
+  - icon: github
+    href: https://github.com/ioannissp?ocid=AIDcmm153qff2f_SEM__k_EAIaIQobChMIl5uKosWAhgMV5o9QBh1vOgceEAAYASAAEgKsp_D_BwE_k_
+  - icon: linkedin
+    href: https://www.linkedin.com/in/ioannis-spanos-ab4178238
+  - icon: envelope
+    href: mailto:is323@ic.ac.uk
+id: ppc
+---
+
+:::{#ppc}
+
+Welcome to my website where I showcase my data science projects and skills!
+
+I am Ioannis Spanos, an MSc Statistics student at Imperial College London. I created this page in order to present my data science projects and let other people interact with them, be inspired by them and give me their valuable comments for improvement.
+
+I believe data always have a story to tell, and what's a better way to tell a story than a website? I hope you enjoy your time here!
+
+:::
