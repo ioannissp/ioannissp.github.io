@@ -1,7 +1,7 @@
 ---
 title: "Web scraping using rvest"
 subtitle: "Applying web scraping to extract S&P 500 annual returns data"
-image: /snp500.png
+image: snp500rvest.png
 date: "2024-05-9"
 ---
 

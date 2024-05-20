@@ -1,7 +1,7 @@
 ---
 title: "Data exploration"
 subtitle: "Exploratory analysis on the iris data set"
-image: /dataexpl.png
+image: dataexploration.png
 date: "2024-05-18"
 ---
 
@@ -128,19 +128,20 @@ print(cor(iris$Sepal.Length[iris$Species=="virginica"], iris$Sepal.Width[iris$Sp
 
 In this case we see that for the setosa species the correlation between sepal length and sepal width is large. This means that sepal width can be an important predictor for sepal length and should be included in the model. Of course we are gonna confirm this later, but the exploratory analysis so far has given us an idea of the relationship between the variables.
 
-To make this relation even easier to understand we will plot pairplots for the data. Also, we will colour each species differently to see how the relationship changes with the species in each case. 
+To make this relation even easier to understand we will plot pairplots for the data. Also, we will colour each species differently to see how the relationship changes with the species in each case.
+
 ```{r}
 pairs(iris[,1:4],col=iris[,5],oma=c(6,6,6,12))
 par(xpd=TRUE) #for the colouring
 legend(0.85, 0.6,as.vector(unique(iris$Species)),fill=c(1,2,3))
 ```
-In the above plot we see the relationships more clearly. All predictors seem to be significant to predict sepal length and they all have a linear relationship with it, some stronger (petal length and width) and some weaker (sepal width for versicolor and virginica). As we can see, the relationships for each species are different so we want to model it differently. This is why we have reached the full model:
-\begin{equation}
+
+In the above plot we see the relationships more clearly. All predictors seem to be significant to predict sepal length and they all have a linear relationship with it, some stronger (petal length and width) and some weaker (sepal width for versicolor and virginica). As we can see, the relationships for each species are different so we want to model it differently. This is why we have reached the full model: \begin{equation}
 Y=\alpha+\beta_{1}X_{1}+\beta_{2}X_{2}+\beta_{3}X_{3}+\gamma_{1}\mathbb{1}_{set}+\gamma_{2}\mathbb{1}_{ver},
-\end{equation}
-where $Y=$Sepal Length, $X_{1}=$Sepal Width, $X_{2}=$Petal Length and $X_{3}=$Petal Width. Also $\mathbb{1}_{set}=1$ for setosa and $\mathbb{1}_{ver}=1$ for versicolor. When they are both $0$ we have virginica.
+\end{equation} where $Y=$Sepal Length, $X_{1}=$Sepal Width, $X_{2}=$Petal Length and $X_{3}=$Petal Width. Also $\mathbb{1}_{set}=1$ for setosa and $\mathbb{1}_{ver}=1$ for versicolor. When they are both $0$ we have virginica.
 
 To fit the model above we firstly need to add to our data frame the variables $\mathbb{1}_{set}, \mathbb{1}_{ver}$ and $\mathbb{1}_{vir}$ that become one only for setosa, versicolor and virginica respectively. We do this below.
+
 ```{r}
 #we create variables Setosa, Versicolor
 iris$Setosa=rep(0, 150)
@@ -153,15 +154,15 @@ head(iris, n=5)
 ```
 
 Now we have everything we need to build our model. We fit it below and get its summary.
+
 ```{r}
 model<-lm(Sepal.Length~Sepal.Width+Petal.Length+Petal.Width+Setosa+Versicolor, data=iris)
 summary(model)
 ```
-In the model above we see that all predictors have p-value less than $0.05$ which indicates they are statistically significant as the exploratory analysis had implied. Also, the adjusted $R^{2}$ is $86.27$ which shows the model is a good fit for the data. The fitted model is 
-\begin{equation}
+
+In the model above we see that all predictors have p-value less than $0.05$ which indicates they are statistically significant as the exploratory analysis had implied. Also, the adjusted $R^{2}$ is $86.27$ which shows the model is a good fit for the data. The fitted model is \begin{equation}
 Y=1.418+0.496X_{1}+0.829X_{2}-0.315X_{3}+1.024\mathbb{1}_{set}+0.3\mathbb{1}_{ver}.
-\end{equation}
-With the model above we can predict the sepal length from the other variables and answer to any relevant questions about it.
+\end{equation} With the model above we can predict the sepal length from the other variables and answer to any relevant questions about it.
 
 Here our project ends. The main purpose of the project was to show how an exploratory analysis should be designed and implemented. Of course, there are a lot you can do to explore the data, but we tried to do only what is relevant to the question we had to ask. We then saw how this exploratory analysis helped us to design the appropriate model for our problem.
 

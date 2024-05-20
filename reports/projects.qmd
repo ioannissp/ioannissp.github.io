@@ -1,11 +1,11 @@
 ---
 title: "Projects"
 listing: 
-  contents: listing_projects
+  contents: listing_projects #folder with the projects and related data
   type: grid
   fields: [image, date, title, subtitle]
   sort: 
-   - "date desc"
+   - "date desc" #descending date order
 ---
 
 ------------------------------------------------------------------------

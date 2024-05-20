@@ -1,6 +1,6 @@
 ---
 title: "Ioannis Spanos"
-image: headshotopt.jpg
+image: mainpage.jpg
 about:
   template: trestles
   image-shape: round
