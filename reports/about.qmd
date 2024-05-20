@@ -1,0 +1,9 @@
+---
+title: "About"
+about: 
+  template: jolla
+  image: headshotopt.jpg
+links: 
+  - icon: github
+    href: https://github.com/ioannissp?ocid=AIDcmm153qff2f_SEM__k_EAIaIQobChMIl5uKosWAhgMV5o9QBh1vOgceEAAYASAAEgKsp_D_BwE_k_
+---

@@ -1,0 +1,20 @@
+{
+  "index.qmd": {
+    "index.html": "d001cf4e"
+  },
+  "about.qmd": {
+    "about.html": "2c75f04b"
+  },
+  "listing_projects/dataexploration.qmd": {
+    "dataexploration.html": "be41bd45"
+  },
+  "listing_projects/snp500rvest.qmd": {
+    "snp500rvest.html": "cf2e395f"
+  },
+  "listing_projects/theeconomist.qmd": {
+    "theeconomist.html": "da0999d1"
+  },
+  "projects.qmd": {
+    "projects.html": "be4185de"
+  }
+}
